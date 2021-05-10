@@ -1613,6 +1613,23 @@ for (size_t i = 0; i < vector_types.size(); ++i) {
     }
   }
  }
+for (size_t i = 0; i < vector_types.size(); ++i) {
+  for (size_t j = 0; j < vector_types.size(); ++j) {
+    for (size_t k = 0; k < vector_types.size(); ++k) {
+      for (size_t l = 0; l < vector_types.size(); ++l) {
+        for (size_t m = 0; m < vector_types.size(); ++m) {
+	  for (size_t n = 0; n < vector_types.size(); ++n) {
+	    for (size_t p = 0; p < vector_types.size(); ++p) {
+	      add("ddm_lpdf", bare_expr_type(double_type()), vector_types[i],
+                  vector_types[j], vector_types[k], vector_types[l],
+                  vector_types[m], vector_types[n], vector_types[p]);
+	    }
+	  }
+        }
+      }
+    }
+  }
+ }
 add("wishart_log", bare_expr_type(double_type()), bare_expr_type(matrix_type()), bare_expr_type(double_type()), bare_expr_type(matrix_type()));
 add("wishart_lpdf", bare_expr_type(double_type()), bare_expr_type(matrix_type()), bare_expr_type(double_type()), bare_expr_type(matrix_type()));
 add("wishart_rng", bare_expr_type(matrix_type()), bare_expr_type(double_type()), bare_expr_type(matrix_type()));
